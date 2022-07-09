@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="w3-container w3-card w3-white w3-margin-bottom">
+  <h1 class="text-black mb-5 border-bottom ">Educational Details</h1>
+  <div style="margin: 20px">
+    <div class=" table-responsive ">
+      <table class=" table table-bordered border-primary text-white mx=5 table table-hover table-dark ">
+        <thead class="thead-light">
+          <tr class="table-warning">
+            <th>Education</th>
+            <th>College/High School</th>
+            <th>Year of Passing</th>
+            <th>University/Board</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+        {% if det %}
+        {% for st in det %}
+
+        <tr class="table-light">
+          <td>{{st.Education}}</td>
+          <td>{{st.College}}</td>
+          <td>{{st.Year_of_Passing}}</td>
+          <td>{{st.University}}</td>
+          <td>{{st.Marks}}</td>
+        </tr>
+        {% endfor %}
+
+        {% endif %}
+
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock content %}

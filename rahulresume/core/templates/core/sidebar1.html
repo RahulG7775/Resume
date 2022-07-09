@@ -1,0 +1,38 @@
+{% load static %}
+
+<div class="w3-third">
+
+    <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+            <img src="{% static 'core/images/rahul.jpg' %}" alt="profilepic" style="width:100%">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+                <h1 class="text-black mx-5 st-font">Rahul Gaikwad</h1>
+            </div>
+        </div>
+
+        <div class="w3-container mt-2 ">
+
+            <div class="dropdown my-menu text-align  ">
+                <button class="btn btn-primary dropdown-toggle btn btn-default btn-lg" style="width:100%;" type="button"
+                    data-toggle="dropdown">Menu
+                    <span></span>
+                </button>
+                <ul class="dropdown-menu my-menu  " style="min-width: 100%;font-size: 25px;text-align: center">
+
+                    <li><a href="{% url 'home' %}" class="nav-link {{home}}">Home</a></li>
+                    <li><a href="{% url 'skill' %}" class="nav-link {{skill}}">Skills</a></li>
+                    <li><a href="{% url 'details' %}">Education Details</a></li>
+                    <li><a href="{% url 'contact' %}" class="nav-link {{contact}}">Contact</a></li>
+                </ul>
+            </div>
+
+
+
+            <br>
+        </div>
+    </div><br>
+
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
